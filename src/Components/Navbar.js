@@ -1,5 +1,7 @@
 import React from 'react';
 import Sidebar from './sidebar';
+import '../styles.css';
+import './scripts';
 
 const Navbar = () => {
     return (
@@ -9,7 +11,7 @@ const Navbar = () => {
                 <span className="logo-name">Medline</span>
                 <img className="image1" src="Medline 2.png" alt="Medline Logo" />
             </div>
-            <sidebar />
+            <Sidebar/>
         </nav>
     );
 };
