@@ -6,28 +6,26 @@ function Creation() {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [subjects, setSubjects] = useState([]);
-  
     const addSubject = () => {
       setSubjects([...subjects, { title: "", description: "", weightage: "1", criteria: [] }]);
     };
   
     return (
-      <div>
-        <div style={{ paddingTop: "75px" }}></div>
+      <div className='creation-container'>
         <Toggle/>
         <h1>Scorecard Creation</h1>
-        <div style={{ marginBottom: "20px" }}>
+        <div className='content-container'>
           <label>Title:</label>
-          <input value={title} onChange={(e) => setTitle(e.target.value)} />
+          <input className='input-1' value={title} onChange={(e) => setTitle(e.target.value)} />
         </div>
-        <div style={{ marginTop: "20px" }}>
           <label>Scorecard Description:</label>
-          <input value={description} onChange={(e) => setDescription(e.target.value)} />
-        </div>
+          <input className='input-1 input-2' value={description} onChange={(e) => setDescription(e.target.value)} />
+        <div className='sub-title'>
         {subjects.map((subject, idx) => (
           <SubjectComponent key={idx} subject={subject} />
         ))}
-        <button onClick={addSubject}>Create Subject</button>
+        </div>
+        <button onClick={addSubject} className='btn-create-subject'>Create Subject</button>
       </div>
     );
   }
