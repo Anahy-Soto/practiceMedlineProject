@@ -10,6 +10,7 @@ body {
   min-height: 100%;
   background: #e5eef5;
 }
+
 nav {
   position: fixed;
   top: 0;
@@ -119,12 +120,16 @@ nav.open .sidebar {
   transition: all 0.3s ease; 
 }
   
-
+.script{
+  padding-top:2rem;
+}
 .bottom-content .logout:hover .link{
   color: #fff;
   transition: all 0.3s ease; 
 }
-
+.test {
+  padding-top: 20rem;
+}
 .logo .logo-name {
   color: #04438b;
 }
@@ -267,4 +272,55 @@ transition: all 0.5s ease;
 }
 .favs-top {
   margin-top: 8rem;
+}
+.temps{
+  margin-top: 5rem;
+}
+.login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  margin-bottom: 20rem;
+
+}
+.login-page h1 {
+  font-size: 4rem;
+  font-weight: 100;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 0.5px;
+  justify-content: space-around;
+  height: 35rem;
+  width: 35rem;
+  padding: 0 1rem 0 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 5px black;
+}
+.btn {
+  border-radius: 20px;
+  background-color: #04438b;
+  color: #fff;
+  border-style: none;
+  height: 5rem;
+  transition: all 0.5s ease;
+  font-size: 1.5rem;
+}
+.username, .password {
+  /* border-style: none; */
+  height: 3rem;
+  padding-left: 1rem;
+  margin-left: 1rem;
+  width: 90%;
+  border-width: 0;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: #002d60;
+  transition: all 0.5s ease;
 }
