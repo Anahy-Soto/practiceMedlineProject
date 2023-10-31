@@ -324,3 +324,25 @@ transition: all 0.5s ease;
   background-color: #002d60;
   transition: all 0.5s ease;
 }
+.creation-container {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.creation-container h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  cursor: context-menu;
+}
+.content-container, .description {
+  margin-bottom: 1rem;
+}
+.btn-create-subject{
+  margin-top: 1rem;
+}
+.sub-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
