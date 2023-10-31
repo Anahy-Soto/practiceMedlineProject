@@ -9,7 +9,7 @@ function SubjectComponent({ subject }) {
   };
 
   return (
-    <div>
+    <div className='sub-title'>
       <label>Subject Title:</label>
       <input value={subject.title} onChange={(e) => subject.title = e.target.value} />
       <label>Description:</label>
