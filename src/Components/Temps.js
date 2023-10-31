@@ -11,19 +11,15 @@ function Temps() {
         </li>
         <li class="templates create-item">
           <div class="blank-page-item"></div>
-          <span class="labels blank-page-label">temp</span>
+          <span class="labels blank-page-label">template1</span>
         </li>
         <li class="templates create-item">
           <div class="blank-page-item"></div>
-          <span class="labels blank-page-label">temp</span>
+          <span class="labels blank-page-label">template2</span>
         </li>
         <li class="templates create-item">
           <div class="blank-page-item"></div>
-          <span class="labels blank-page-label">temp</span>
-        </li>
-        <li class="more-btn create-item">
-          <i class='bx bx-dots-vertical-rounded more-icon'></i>
-          <span class="labels more-label">more</span>
+          <span class="labels blank-page-label">template3</span>
         </li>
       </ul>
     </div>
