@@ -4,7 +4,7 @@ function CriteriaComponent({ criteria, index, updateCriteria }) {
   const scoringOptions = ["1-5", "1-10", "Create New Scoring Type"];
 
   return (
-    <div>
+    <div className='criteria-content'>
       <label>Criteria Title:</label>
       <input
         value={criteria.title} 
