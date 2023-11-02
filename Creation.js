@@ -22,22 +22,24 @@ function Creation() {
         }
 
     return (
-      <div>
-        <div style={{ paddingTop: "75px" }}></div>
+      <div className='creation-container'>
         <Toggle/>
         <h1>Scorecard Creation</h1>
-        <div style={{ marginBottom: "20px" }}>
+        <div className='content-container'>
           <label>Title:</label>
           <input value={title} onChange={(e) => setTitle(e.target.value)} />
         </div>
         <div style={{ marginTop: "20px" }}>
           <label>Scorecard Description:</label>
-          <input value={description} onChange={(e) => setDescription(e.target.value)} />
+          <input className='input-1 input-2'  value={description} onChange={(e) => setDescription(e.target.value)} />
         </div>
+        <div>
         {subjects.map((subject, idx) => (
           <SubjectComponent key={idx} index={idx} subject={subject} updateSubject={updateSubject} updateCriteria={updateCriteria}/>
         ))}
-        <button onClick={addSubject}>Create Subject</button>
+        </div>
+
+        <button onClick={addSubject} className='btn-create-subject'>Create Subject</button>
       </div>
     );
   }
