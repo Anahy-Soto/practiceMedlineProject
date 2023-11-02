@@ -9,7 +9,7 @@ function SubjectComponent({ subject, updateSubject, updateCriteria,index }) {
     updateSubject(index, newSubject);
 };
   return (
-    <div>
+    <div className='sub-title'>
       <label>Subject Title:</label>
       <input value={subject.title} onChange={(e) => {
         const newSubject = { ...subject, title:  e.target.value };
