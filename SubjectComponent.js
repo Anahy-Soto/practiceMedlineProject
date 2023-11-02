@@ -1,28 +1,42 @@
 import React, { useState } from 'react';
 import CriteriaComponent from './CriteriaComponent';
 
-function SubjectComponent({ subject }) {
-  const [criterias, setCriterias] = useState([]);
+function SubjectComponent({ subject, updateSubject, updateCriteria,index }) {
 
   const addCriteria = () => {
-    setCriterias([...criterias, { title: "", scoringType: "1-5", weightage: "1" }]);
-  };
-
+    const newSubject = {...subject};
+    newSubject.criteria.push({ title: "", scoringType: "1-5", weightage: "1" });
+    updateSubject(index, newSubject);
+};
   return (
-    <div className='sub-title'>
+    <div>
       <label>Subject Title:</label>
-      <input value={subject.title} onChange={(e) => subject.title = e.target.value} />
+      <input value={subject.title} onChange={(e) => {
+        const newSubject = { ...subject, title:  e.target.value };
+        updateSubject(index, newSubject);
+      }} />
       <label>Description:</label>
-      <input value={subject.description} onChange={(e) => subject.description = e.target.value} />
+      <input value={subject.description} onChange={(e) => {
+                const newSubject = { ...subject, description: e.target.value };
+                updateSubject(index, newSubject);
+              }} />
       <label>Weightage:</label>
-      <select value={subject.weightage} onChange={(e) => subject.weightage = e.target.value}>
+      <select value={subject.weightage} onChange={(e) => {
+    const newSubject = { ...subject, weightage: e.target.value };
+    updateSubject(index, newSubject);
+}}>
         {[...Array(100).keys()].map(num => (
           <option key={num} value={num + 1}>{num + 1}%</option>
         ))}
       </select>
       <button onClick={addCriteria}>Save Subject and Add Criteria</button>
-      {criterias.map((criteria, idx) => (
-        <CriteriaComponent key={idx} criteria={criteria} />
+      {subject.criteria.map((criteria, idx) => (
+        <CriteriaComponent 
+          key={idx}
+          index={idx} 
+          criteria={criteria}
+          updateCriteria={(newCriteria) => updateCriteria(index, idx, newCriteria)}
+           />
       ))}
     </div>
   );

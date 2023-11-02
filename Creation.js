@@ -6,26 +6,38 @@ function Creation() {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [subjects, setSubjects] = useState([]);
+  
     const addSubject = () => {
       setSubjects([...subjects, { title: "", description: "", weightage: "1", criteria: [] }]);
     };
-  
+    const updateSubject = (index, newSubject) => {
+        const newSubjects = [...subjects];
+        newSubjects[index] = newSubject;
+        setSubjects(newSubjects);
+    };
+    const updateCriteria = (subjectIndex, criteriaIndex, newCriteria) => {
+            const newSubjects = [...subjects];
+            newSubjects[subjectIndex].criteria[criteriaIndex]=newCriteria;
+            setSubjects(newSubjects);
+        }
+
     return (
-      <div className='creation-container'>
+      <div>
+        <div style={{ paddingTop: "75px" }}></div>
         <Toggle/>
         <h1>Scorecard Creation</h1>
-        <div className='content-container'>
+        <div style={{ marginBottom: "20px" }}>
           <label>Title:</label>
-          <input className='input-1' value={title} onChange={(e) => setTitle(e.target.value)} />
+          <input value={title} onChange={(e) => setTitle(e.target.value)} />
         </div>
+        <div style={{ marginTop: "20px" }}>
           <label>Scorecard Description:</label>
-          <input className='input-1 input-2' value={description} onChange={(e) => setDescription(e.target.value)} />
-        <div className='sub-title'>
-        {subjects.map((subject, idx) => (
-          <SubjectComponent key={idx} subject={subject} />
-        ))}
+          <input value={description} onChange={(e) => setDescription(e.target.value)} />
         </div>
-        <button onClick={addSubject} className='btn-create-subject'>Create Subject</button>
+        {subjects.map((subject, idx) => (
+          <SubjectComponent key={idx} index={idx} subject={subject} updateSubject={updateSubject} updateCriteria={updateCriteria}/>
+        ))}
+        <button onClick={addSubject}>Create Subject</button>
       </div>
     );
   }
