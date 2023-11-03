@@ -16,7 +16,7 @@ function Sidebar() {
     <div className="sidebar-content">
         <ul className="lists">
         <li className="list">
-            <a href="/Homepage" className="nav-link">
+            <a href="/homepage" className="nav-link">
             <i className="bx bx-home-alt icon"></i>
             <span className="link">Dashboard</span>
             </a>
@@ -36,7 +36,7 @@ function Sidebar() {
         </ul>
         <div className="bottom-content">
         <li className="list">
-            <a href="/" className="nav-link logout">
+            <a href="/login" className="nav-link logout">
             <i className="bx bx-log-out icon"></i>
             <span className="link">Logout</span>
             </a>
