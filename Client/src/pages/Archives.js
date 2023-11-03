@@ -1,10 +1,8 @@
 import React from "react";
-import Toggle from "../Components/scripts";
 
 function Archives() {
   return (
     <div>
-      <Toggle />
       <h1 class="top">Archives</h1>
       <div class="archives-top">
         <div class="archives-content">
