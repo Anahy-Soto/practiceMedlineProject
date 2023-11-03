@@ -1,7 +1,7 @@
 import React from 'react';
 import CriteriaComponent from './CriteriaComponent';
 
-function SubjectComponent({ subject, updateSubject, updateCriteria,index }) {
+function SubjectComponent({ subject, updateSubject, updateCriteria,index, scoringOptions, setScoringOptions }) {
 
   const addCriteria = () => {
     const newSubject = {...subject};
@@ -36,6 +36,8 @@ function SubjectComponent({ subject, updateSubject, updateCriteria,index }) {
           index={idx} 
           criteria={criteria}
           updateCriteria={(newCriteria) => updateCriteria(index, idx, newCriteria)}
+          scoringOptions={scoringOptions}
+          setScoringOptions={setScoringOptions}
            />
       ))}
     </div>
