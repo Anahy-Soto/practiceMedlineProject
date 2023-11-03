@@ -6,6 +6,7 @@ function Creation() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [subjects, setSubjects] = useState([]);
+  const [scoringOptions, setScoringOptions] = useState (['1-5', '1-10', ]);
 
   const addSubject = () => {
     setSubjects([
@@ -22,6 +23,16 @@ function Creation() {
     const newSubjects = [...subjects];
     newSubjects[subjectIndex].criteria[criteriaIndex] = newCriteria;
     setSubjects(newSubjects);
+  };
+  const saveScorecard = () => {
+    const scorecardData = {
+      title,
+      description,
+      subjects,
+      scoringOptions,
+    };
+    localStorage.setItem('scorecardData', JSON.stringify(scorecardData));
+    alert('Scorecard saved!');
   };
 
   return (
@@ -48,6 +59,8 @@ function Creation() {
             subject={subject}
             updateSubject={updateSubject}
             updateCriteria={updateCriteria}
+            scoringOptions={scoringOptions}
+            setScoringOptions={setScoringOptions}
           />
         ))}
       </div>
