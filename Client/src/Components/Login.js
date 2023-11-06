@@ -8,7 +8,7 @@ function Login() {
 
   const handleLogin = () => {
     // You can implement the login logic here, e.g., send a request to a server.
-    navigate("/homepage")
+    navigate("/pages/homepage")
     // For this example, let's just print the entered username and password.
     console.log('Username:', username);
     console.log('Password:', password);
