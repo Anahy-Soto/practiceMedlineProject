@@ -5,7 +5,6 @@ import Archives from './pages/Archives';
 import Login from './Components/Login';
 import Homepage from './pages/Homepage';
 import Creation from './pages/creation';
-import Scorecard from "./pages/Scorecard";
 
 const Layout = () => {
   return (
@@ -19,34 +18,31 @@ const Layout = () => {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/pages/",
     element: <Layout />,
     children: [
       {
-        path: "/homepage",
+        path: "/pages/homepage",
         element:<Homepage />
       },
       {
-        path:"/singleScorecard/:id",
+        path:"/pages/singleScorecard/:id",
         element:<SingleScorecard />
       },
       {
-        path:"/Archives",
+        path:"/pages/Archives",
         element:<Archives />
       },
       {
-        path:"/Create",
+        path:"/pages/Create",
         element:<Creation />
       },
-      {
-        path:"/Scorecard",
-        element:<Scorecard />
-      }
+
 
     ]
   },
   {
-    path:"/login",
+    path:"/",
     element:<Login />
   },
 ])
