@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import Toggle from "../Components/scripts";
 import SubjectComponent from "./SubjectComponent";
-
+import {useNavigate} from 'react-router-dom';
 function Creation() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [subjects, setSubjects] = useState([]);
   const [scoringOptions, setScoringOptions] = useState (['1-5', '1-10', ]);
-
+  const navigate = useNavigate();
   const addSubject = () => {
     setSubjects([
       ...subjects,
-      { title: "", description: "", weightage: "1", criteria: [] },
+      { title: "", description: "",  criteria: [] },
     ]);
   };
   const updateSubject = (index, newSubject) => {
@@ -32,9 +32,8 @@ function Creation() {
       scoringOptions,
     };
     localStorage.setItem('scorecardData', JSON.stringify(scorecardData));
-    alert('Scorecard saved!');
+    navigate("/scorecard");
   };
-
   return (
     <div className="creation-container">
       <Toggle />
@@ -64,12 +63,13 @@ function Creation() {
           />
         ))}
       </div>
-
       <button onClick={addSubject} className="btn-create-subject">
         Create Subject
+      </button>
+      <button onClick={saveScorecard} className="btn-save-scorecard">
+        Save Scorecard
       </button>
     </div>
   );
 }
-
 export default Creation;

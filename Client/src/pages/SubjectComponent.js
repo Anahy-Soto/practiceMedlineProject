@@ -1,8 +1,6 @@
 import React from 'react';
 import CriteriaComponent from './CriteriaComponent';
-
 function SubjectComponent({ subject, updateSubject, updateCriteria,index, scoringOptions, setScoringOptions }) {
-
   const addCriteria = () => {
     const newSubject = {...subject};
     newSubject.criteria.push({ title: "", scoringType: "1-5", weightage: "1" });
@@ -20,15 +18,7 @@ function SubjectComponent({ subject, updateSubject, updateCriteria,index, scorin
                 const newSubject = { ...subject, description: e.target.value };
                 updateSubject(index, newSubject);
               }} />
-      <label>Weightage:</label>
-      <select value={subject.weightage} onChange={(e) => {
-    const newSubject = { ...subject, weightage: e.target.value };
-    updateSubject(index, newSubject);
-}}>
-        {[...Array(100).keys()].map(num => (
-          <option key={num} value={num + 1}>{num + 1}%</option>
-        ))}
-      </select>
+              
       <button onClick={addCriteria}>Save Subject and Add Criteria</button>
       {subject.criteria.map((criteria, idx) => (
         <CriteriaComponent 
@@ -43,5 +33,4 @@ function SubjectComponent({ subject, updateSubject, updateCriteria,index, scorin
     </div>
   );
 }
-
 export default SubjectComponent;

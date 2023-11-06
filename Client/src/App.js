@@ -5,6 +5,7 @@ import Archives from './pages/Archives';
 import Login from './Components/Login';
 import Homepage from './pages/Homepage';
 import Creation from './pages/creation';
+import Scorecard from "./pages/Scorecard";
 
 const Layout = () => {
   return (
@@ -37,7 +38,10 @@ const router = createBrowserRouter([
         path:"/Create",
         element:<Creation />
       },
-
+      {
+        path:"/Scorecard",
+        element:<Scorecard />
+      }
 
     ]
   },

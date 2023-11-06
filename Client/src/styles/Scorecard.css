@@ -1,0 +1,38 @@
+
+.scorecard-container {
+    border: 2px solid #04438b;
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+h1, p {
+    text-align: center;
+}
+.subject {
+    border-bottom: 1px solid #04438b;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+.subject:last-child {
+    border-bottom: none;
+}
+.subject h2, .subject p:first-child {
+    display: inline-block;
+    vertical-align: middle;
+}
+.subject p:first-child {
+    float: right;
+    font-weight: bold;
+}
+.criterion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.criterion p {
+    margin: 5px 0;
+}
+.total-score {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;}
