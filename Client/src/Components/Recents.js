@@ -47,7 +47,7 @@ function Recents() {
       <div className="history-top">
         <div className="history-content">
           {scorecard.map((data)=>(
-            <Link className='react-link' to={`/SingleScorecard/${data.scorecardid}`}>
+            <Link className='react-link' to={`/pages/SingleScorecard/${data.scorecardid}`}>
               <div className="col-1-contents " key={data.userid}>
                 <div className="col-1 item-1">
                   <p>{data.scorecardtitle}</p>
