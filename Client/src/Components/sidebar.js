@@ -16,19 +16,19 @@ function Sidebar() {
     <div className="sidebar-content">
         <ul className="lists">
         <li className="list">
-            <a href="/homepage" className="nav-link">
+            <a href="/pages/homepage" className="nav-link">
             <i className="bx bx-home-alt icon"></i>
             <span className="link">Dashboard</span>
             </a>
         </li>
         <li class="list">
-            <a href="/Archives" className="nav-link">
+            <a href="/pages/Archives" className="nav-link">
             <i class="bx bx-box icon"></i>
             <span className="link">Archives</span>
             </a>
         </li>
         <li class="list">
-            <a href="/Create" className="nav-link">
+            <a href="/pages/Create" className="nav-link">
             <i class="bx bx-plus-circle icon"></i>
             <span className="link">Create</span>
             </a>
@@ -36,7 +36,7 @@ function Sidebar() {
         </ul>
         <div className="bottom-content">
         <li className="list">
-            <a href="/login" className="nav-link logout">
+            <a href="/" className="nav-link logout">
             <i className="bx bx-log-out icon"></i>
             <span className="link">Logout</span>
             </a>
