@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+
 
 function Temps() {
   return (
@@ -6,8 +8,10 @@ function Temps() {
         <div id="dash" class="create-section">
       <ul class="lists-create">
         <li class="templates create-item">
-          <div class="blank-page-item"></div>
-          <span class="labels blank-page-label">Blank</span>
+          <Link className="labels blank-page-label link1" to={'/Create'}>
+            <div class="blank-page-item"></div>
+            <span class="labels blank-page-label">Blank</span>
+          </Link>
         </li>
         <li class="templates create-item">
           <div class="blank-page-item"></div>
