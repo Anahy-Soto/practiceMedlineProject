@@ -1,8 +1,9 @@
 import React from 'react'
+import Scorecard from './Scorecard';
 
 const SingleScorecard = () => {
   return (
-    <div style={{paddingTop: '10rem',}}>singleScorecard</div>
+    <div><Scorecard /></div>
   )
 }
 
