@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Toggle from "../Components/scripts";
 import "../styles/Scorecard.css";
+import { Link } from "react-router-dom";
+
 function calculateOverallScore(subjects) {
     let overallScore = 0;
     subjects.forEach(subject => {
