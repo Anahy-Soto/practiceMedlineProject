@@ -10,7 +10,7 @@ function calculateOverallScore(subjects) {
       subject.criteria.forEach(criterion => {
         const criterionScore = Number(criterion.userScore || criterion.score);
         const criterionWeightage = Number(criterion.userWeightage || criterion.weightage) / 100;
-        subjectScore += criterionScore * criterionWeightage;
+        subjectScore += (criterionScore * criterionWeightage) * 100;
       });
       const subjectWeightage = Number(subject.userWeightage || subject.weightage) / 100;
       overallScore += subjectScore * subjectWeightage;
