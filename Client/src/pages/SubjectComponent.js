@@ -9,17 +9,17 @@ function SubjectComponent({ subject, updateSubject, updateCriteria,index, scorin
   return (
     <div className='sub-title'>
       <label>Subject Title:</label>
-      <input value={subject.title} onChange={(e) => {
+      <input className='sub-t' value={subject.title} onChange={(e) => {
         const newSubject = { ...subject, title:  e.target.value };
         updateSubject(index, newSubject);
       }} />
       <label>Description:</label>
-      <input value={subject.description} onChange={(e) => {
+      <input className='descript' value={subject.description} onChange={(e) => {
                 const newSubject = { ...subject, description: e.target.value };
                 updateSubject(index, newSubject);
               }} />
               
-      <button onClick={addCriteria}>Save Subject and Add Criteria</button>
+      <button className='btns-save' onClick={addCriteria}>Save Subject and Add Criteria</button>
       {subject.criteria.map((criteria, idx) => (
         <CriteriaComponent 
           key={idx}
