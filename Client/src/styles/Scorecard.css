@@ -1,9 +1,13 @@
 
 .scorecard-container {
-    border: 2px solid #04438b;
+    border: 2px solid #ffffff;
     padding: 20px;
     max-width: 900px;
     margin: 20px auto;
+    margin-top: 10rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
 h1, p {
     text-align: center;
@@ -35,4 +39,35 @@ h1, p {
 .total-score {
     text-align: center;
     font-weight: bold;
-    font-size: 1.2em;}
+    font-size: 1.2em;
+    
+}
+
+.btns-creation, .btns-save {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #b5defd;
+    padding: 0.2rem 0.2rem;
+    transition: all 0.5s ease;
+    &:hover{
+        background-color: #8accff;
+        transition: all 0.5s ease;
+    }
+}
+.sv-criteria {
+    border-radius: 10px;
+    border-style: none;
+    background-color: #b5defd;
+    padding: 0.2rem 0.2rem;
+    transition: all 0.5s ease;
+    &:hover{
+        background-color: #8accff;
+        transition: all 0.5s ease;
+    }
+}
+.criteria-input, .range, .sub-t, .descript, .score-t, score-d, .input-1{
+    border-radius: 10px;
+    border: solid 1px gray;
+}
