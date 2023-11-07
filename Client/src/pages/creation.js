@@ -32,7 +32,7 @@ function Creation() {
       scoringOptions,
     };
     localStorage.setItem('scorecardData', JSON.stringify(scorecardData));
-    navigate("/scorecard");
+    navigate("/pages/scorecard");
   };
   return (
     <div className="creation-container">
@@ -40,10 +40,10 @@ function Creation() {
       <h1>Scorecard Creation</h1>
       <div className="content-container">
         <label>Title:</label>
-        <input value={title} onChange={(e) => setTitle(e.target.value)} />
+        <input className="score-t" value={title} onChange={(e) => setTitle(e.target.value)} />
       </div>
       <div style={{ marginTop: "20px" }}>
-        <label>Scorecard Description:</label>
+        <label className="score-d">Scorecard Description:</label>
         <input
           className="input-1 input-2"
           value={description}
@@ -63,10 +63,10 @@ function Creation() {
           />
         ))}
       </div>
-      <button onClick={addSubject} className="btn-create-subject">
+      <button onClick={addSubject} className="btn-create-subject btns-creation">
         Create Subject
       </button>
-      <button onClick={saveScorecard} className="btn-save-scorecard">
+      <button onClick={saveScorecard} className="btn-save-scorecard btns-creation" >
         Save Scorecard
       </button>
     </div>
