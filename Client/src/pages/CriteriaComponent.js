@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
+import { Link } from "react-router-dom";
+
 function CriteriaComponent({ criteria, index, updateCriteria, scoringOptions,setScoringOptions }) {
   const [isCreatingNewScoringType, setIsCreatingNewScoringType] = useState(false);
   return (
     <div className='criteria-content'>
       <label>Criteria Title:</label>
-      <input
+      <input className='criteria-input'
         value={criteria.title} 
         onChange={(e) => {
           const newCriteria = {...criteria, title: e.target.value };
@@ -12,7 +14,7 @@ function CriteriaComponent({ criteria, index, updateCriteria, scoringOptions,set
         }} 
       />
       <label>Scoring Range:</label>
-      <select
+      <select className='range'
         value={criteria.scoringType} 
         onChange={(e) => {
           if (e.target.value ==="Create New Scoring Range") {
@@ -77,8 +79,10 @@ function CriteriaComponent({ criteria, index, updateCriteria, scoringOptions,set
   setIsCreatingNewScoringType(false);
 }}
   />
-)}
-      <button>Save Criteria</button>
+)}  
+    <Link to={'/pages/scorecard'}>
+      <button className='sv-criteria'>Save Criteria</button>
+    </Link>
     </div>
   );
 }      
