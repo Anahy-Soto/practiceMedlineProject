@@ -36,11 +36,41 @@ h1, p {
 .criterion p {
     margin: 5px 0;
 }
-.total-score {
+.total-score{
     text-align: center;
     font-weight: bold;
     font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
+}
+.save-scorecard-btn button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.save-scorecard-btn{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #b5defd;
+    padding: 0.2rem 0.2rem;
+    transition: all 0.5s ease;
+    &:hover{
+        background-color: #8accff;
+        transition: all 0.5s ease;
+    }
+}
+
+.save-btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btns-creation, .btns-save {
