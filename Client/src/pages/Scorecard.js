@@ -83,6 +83,11 @@ function Scorecard() {
       <div className="total-score">
         <p><strong>Overall Score: </strong>{calculateOverallScore(scorecardData.subjects)}</p>
       </div>
+      <div className="save-btn-container">
+        <Link to={'/pages/homepage'}>
+          <button className="save-scorecard-btn">Save Scorecard</button>
+        </Link>
+      </div>
     </div>
   );
 }
